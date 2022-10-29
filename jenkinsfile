@@ -1,0 +1,20 @@
+pipeline {
+  agent any
+    stages {
+      stage('checkout') {
+        steps {
+          sh 'git@github.com:venkateshakkalapothu/project1.git'
+          }
+       }
+  stage('build') {
+        steps {
+          sh 'mvn package'
+          }
+       } 
+     stage('deploy') {
+        steps {
+          sh 'cp /var/vib/  /opt/apache-tomcat../webapps'
+          }
+       }
+    }
+  }
