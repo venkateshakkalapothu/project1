@@ -10,11 +10,6 @@ pipeline {
         steps {
           sh 'mvn package'
           }
-       } 
-     stage('deploy') {
-        steps {
-          sh 'cp /var/vib/  /opt/apache-tomcat../webapps'
-          }
        }
     }
   }
